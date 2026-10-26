@@ -7,7 +7,7 @@ import plotly.express as px
 st.set_page_config(page_title="FoodTech Customer Lifecycle Analysis", layout="wide")
 
 # --- DATABASE INITIALIZATION ---
-@st.cache_data
+@st.cache_resource
 def init_db():
     conn = sqlite3.connect(':memory:', check_same_thread=False)
     cursor = conn.cursor()
